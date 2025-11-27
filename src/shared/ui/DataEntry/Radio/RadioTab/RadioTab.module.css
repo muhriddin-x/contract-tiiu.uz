@@ -1,0 +1,8 @@
+.Content {
+  @apply text-sm leading-4 block border border-border-color py-2 md:py-3 px-4;
+  border-radius: inherit;
+}
+
+.Radio:checked + .Content {
+  @apply border-primary bg-primary text-white;
+}

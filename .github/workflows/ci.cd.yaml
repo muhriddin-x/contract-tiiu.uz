@@ -1,0 +1,128 @@
+name: TIIU-FRONT-CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - pre-prod
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: 20.x
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Cache Node modules
+        uses: actions/cache@v4
+        with:
+          path: "**/node_modules"
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+        env:
+          CI: true
+
+  prod-deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to Production
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.SSH_HOST_CONSULTING }}
+          username: ${{ secrets.SSH_USERNAME_CONSULTING }}
+          key: ${{ secrets.SSH_KEY_CONSULTING }}
+          port: ${{ secrets.SSH_PORT_CONSULTING }}
+          script: |
+            ACTIVE_ENV=$(grep "set \$active_env" /etc/nginx/sites-available/tiiu.uz | awk '{print $3}' | tr -d ';')
+            if [ "$ACTIVE_ENV" = "tiiu_live" ]; then
+              NEW_ENV="tiiu_staging"
+              NEW_PORT=3015
+              OLD_ENV="tiiu_live"
+            else
+              NEW_ENV="tiiu_live"
+              NEW_PORT=3014
+              OLD_ENV="tiiu_staging"
+            fi
+
+            cd /mnt/sas0/production/crm/crm-tiiu/$NEW_ENV
+            git pull origin main
+            export NODE_ENV=development
+            yarn install
+            export NODE_ENV=production
+            yarn build
+
+            if pm2 describe @mentalaba-crm/$NEW_ENV > /dev/null; then
+              STATUS=$(pm2 info @mentalaba-crm/$NEW_ENV | grep status | awk '{print $4}')
+              if [ "$STATUS" = "stopped" ]; then
+                pm2 start ecosystem.config.js --only @mentalaba-crm/$NEW_ENV --env production
+              else
+                pm2 restart @mentalaba-crm/$NEW_ENV --update-env --env production
+              fi
+            else
+              pm2 start ecosystem.config.js --only @mentalaba-crm/$NEW_ENV --env production
+            fi
+
+            MAX_WAIT=60
+            WAITED=0
+            until nc -z localhost $NEW_PORT || [ $WAITED -ge $MAX_WAIT ]; do
+              echo "Port $NEW_PORT hali ochilmadi, $WAITED sekund kutildi..."
+              sleep 1
+              WAITED=$((WAITED + 1))
+            done
+
+            if ! nc -z localhost $NEW_PORT; then
+              echo "❌ Port ochilmadi. LOG:"
+              pm2 logs @mentalaba-crm/$NEW_ENV --lines 50
+              exit 1
+            fi
+
+            curl --fail http://localhost:$NEW_PORT || exit 1
+            curl --fail https://admission.tiiu.uz || exit 1
+
+            sudo sed -i "s/set \$active_env $ACTIVE_ENV/set \$active_env $NEW_ENV/" /etc/nginx/sites-available/tiiu.uz
+            sudo nginx -t && sudo systemctl reload nginx
+
+            pm2 stop @mentalaba-crm/$OLD_ENV
+
+            curl -X POST "https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMessage" \
+            --header "Content-Type: application/json" \
+            --data-raw "{\"chat_id\": \"${{ secrets.CHAT_ID }}\", \"text\": \"✅ admission.tiiu.uz Deployed Successfully to $NEW_ENV (port $NEW_PORT). Commit: ${{ github.event.head_commit.message }}\"}"
+
+  notify-failure:
+    runs-on: ubuntu-latest
+    needs: [ build, prod-deploy ]
+    if: failure()
+    steps:
+      - name: Send Failure Notification
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.SSH_HOST_CONSULTING }}
+          username: ${{ secrets.SSH_USERNAME_CONSULTING }}
+          key: ${{ secrets.SSH_KEY_CONSULTING }}
+          port: ${{ secrets.SSH_PORT_CONSULTING }}
+          script: |
+            curl -X POST "https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMessage" \
+            --header "Content-Type: application/json" \
+            --data-raw "{\"chat_id\": \"${{ secrets.CHAT_ID }}\", \"text\": \"❌ admission.tiiu.uz Pipeline Failed: ${{ github.workflow }} run #${{ github.run_number }} failed.\"}"

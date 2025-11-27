@@ -1,0 +1,209 @@
+{
+  "changePhoneNumber": "Telefon raqamni o'zgartirish",
+
+  "auth": {
+    "title": "Подать заявку на поступление 2025-2026 гг.",
+    "checkUserSubTitle": "Введите свой номер телефона для регистрации или авторизации",
+    "phone": "Номер телефона",
+    "phonePlaceholder": "Введите номер телефона",
+    "changePhoneNumber": "Изменить номер",
+    "changeNumber": "Изменить номер",
+    "verificationCode": "Проверочный код",
+    "verificationPlaceholder": "Введите проверочный код",
+    "verificationCodeReq":"Введите код подтверждения",
+    "verificationCodeValidation":"Введите только 6-значный номер",
+    "verificationCodeIncorrect":"Код подтверждения недействителен. Попробуйте еще раз!",
+    "verificationCodeServerError":"Ошибка сервера. Нажмите «Отправить повторно» и введите код еще раз.",
+
+    "userPhoneVerification": "Введите код подтверждения, полученный на ваш номер <span>{{number}}</span>.",
+    "resendCodeTime": "Пожалуйста, подождите <span>{{time}}</span> секунд, чтобы повторно отправить код.",
+    "resendCode": "Отправить код повторно",
+    "createAccountTitle": "Создайте учетную запись, чтобы подать заявку",
+    "passportOrBirthPlace": "Введите номер своего паспорта или удостоверения личности и дату рождения.",
+    "passportOrIdCard": "Номер паспорта или удостоверения личности",
+    "birthDate": "День рождения",
+    "birthDateReq":"Введите день рождения",
+    "minBirthDate":"Вы не можете подать заявку, если вам меньше 15 лет",
+    "birthDatePlaceholder": "день.месяц.год",
+    "continue": "Продолжать",
+    "next":"Далее",
+    "toContinue":"Продолжать"
+
+
+  },
+
+  "prograssBar": {
+    "personalInfo": "Персональная информация",
+    "personalInfoDesc": "Паспортные данные, адрес, телефоны",
+    "educationInfo": "Предыдущее образование",
+    "educationInfoDesc": "Информация о предыдущем образовании и знании иностранных языков",
+    "selectDirection": "Выберите направление",
+    "selectDirectionDesc": "Выбор направления или специальности и формы обучения"
+  },
+
+  "personalInfo": {
+    "title": "Персональная информация",
+    "name": "Имя",
+    "namePlaceholder": "Введите ваше имя",
+    "surname": "Фамилия",
+    "surnamePlaceholder": "Введите вашу фамилию",
+    "fatherName": "Отчество",
+    "fatherNamePlaceholder": "Введите ваше отчество",
+    "passportSeria": "Серия и номер паспорта",
+    "passportSeriaPlaceholder": "Серия и номер паспорта",
+    "birth_date": "Дата рождения",
+    "birth_datePlaceholder": "Введите свой день рождения",
+    "jshshr": "ИНН",
+    "jshshrPlaceholder": "Введите свой номер ИНН",
+    "gender": "Пол",
+    "citizenship": "Гражданство",
+    "birth_place": "Место рождения",
+    "phoneReq":"Введите свой номер телефона",
+    "extraPhoneReq":"Введите дополнительный номер телефона",
+    "emailReq":"Введите адрес электронной почты",
+    "validPhoneNumber":"Проверьте правильность введенного номера!",
+    "serverError":"Ошибка сервера. Повторите попытку позже.",
+    "phoneInvalid":"Телефон должен быть действительным номером телефона"
+
+
+  },
+  "contactInfo": {
+    "title": "Телефоны для связи",
+    "phone": "Телефон",
+    "extraPhone": "Дополнительный телефон",
+    "email":"Электронная почта",
+    "emailPlaceholder":"Введите ваш адрес электронной почты"
+  },
+  "educationInfo": {
+    "title": "Предыдущее образование",
+    "institutionType": "Тип учебного заведения",
+    "institutionTypePlaceholder": "Выберите тип учебного заведения",
+    "region": "Регион",
+    "regionPlaceholder": "Выберите регион",
+    "district": "Район",
+    "institutionName": "Название учебного заведения",
+    "uploadDiplom": "Загрузите диплом",
+    "requiredTypeUpload": "Загрузите файлы объемом не более 5 МБ, .png, .jpg, .jpeg, .pdf",
+    "uploadFile": "Загрузить файл",
+    "documentNumber":"Номер диплома или сертификата"
+
+  },
+  "uzbmb":{
+    "title": "Загрузите результат УЗБМБ (DTM) и станьте студентом без привилегированного экзамена!",
+    "fileUpload":"Копия результата экзамена"
+  },
+
+  "certifcate": {
+    "title": "Есть ли у вас сертификат иностранного языка?",
+    "yes": "Да, есть",
+    "no": "Нет",
+    "certifcateUpload": "Загрузите сертификат",
+    "requiredTypeUpload": "Загрузите файлы объемом не более 5 МБ, .png, .jpg, .jpeg, .pdf",
+    "uploadFile": "Загрузить файл",
+    "certificationType":"Тип сертификата"
+
+  },
+
+  "selectDirection": {
+    "selectDirection": "Выберите направление",
+    "degree": "Степень",
+    "selectDegree": "Выберите степень",
+    "directionOrSpeciality": "Направление или специальность",
+    "selectDirectionOrSpeciality": "Выберите направление или специальность",
+    "eduType": "Форма обучения",
+    "selectEduType": "Выберите форму обучения",
+    "workExperience": "Опыт работы",
+    "workExperienceExtra": "Скачать справку об опыте работы на сайте <span>{{value}}</span>",
+    "eduLang": "Язык обучения",
+    "selectEduLang": "Выберите язык обучения",
+    "tuitionFeeForYear": "Стоимость обучения за год",
+    "agreeRequariment": "Всю информацию в заявке я заполнил собственноручно, гарантирую, что мои данные верны. Я понимаю, что приемная комиссия оставляет за собой право отклонить мое заявление, если я предоставил о себе ложную или вводящую в заблуждение информацию.",
+    "sendApplication": "Отправить заявку",
+    "back": "Назад"
+  },
+
+  "applicationStatus": {
+    "applicationStatus": "Статус заявки",
+    "submissionDate": "Дата подачи заявки",
+    "reviewApplication": "Просмотреть заявку",
+    "myApplication": "Моя заявка",
+    "degree": "Степень",
+    "direction": "Направление",
+    "educationType": "Форма обучения",
+    "educationLang": "Язык обучения",
+    "workExperience": "Опыт работы",
+    "applicationEdit": "Редактировать заявку",
+    "cancalApplication": "Отменить заявку",
+    "onlineExam": "Сдача онлайн-экзамена"
+  },
+
+  "allStatus": {
+    "pending": "В ожидании",
+    "accepted": "Подтвержденный",
+    "called-exam": "Приглашен на экзамен",
+    "edit-reject": "Отклоненный на редактирование",
+    "rejected": "Отклоненный",
+    "marked": "Результат экзамена",
+    "came-exam": "Приглашен на экзамен",
+    "recom-student": "Рекомендуется на студентxы",
+    "pendingText": "Ваша заявка рассматривается экспертами"
+  },
+  "examResult": {
+    "examSubjects": "Предметы экзамена",
+    "examSubjectName": "Название предмета экзамена",
+    "everySubject": "По каждому предмету",
+    "correctAnswer": "Количество правильных ответов",
+    "overallScoreBySubject": "Общий счет",
+    "examResult": "Результаты экзамена",
+    "contactSoon": "Сотрудники университета свяжутся с вами в ближайшее время.",
+    "callCenter": "Контактный центр:",
+    "examDate": "Дата экзамена:"
+  },
+
+  "layoutRoute": {
+    "personalInfo": "Персональная информация",
+    "personalInfoDesc": "Паспортные данные, адрес, телефоны",
+    "educationInfo": "Предыдущее образование",
+    "educationInfoDesc": "Информация о предыдущем образовании",
+    "selectDirection": "Выберите направление",
+    "selectDirectionDesc": "Выбор направления и формы обучения",
+    "applications": "Мои заявки",
+    "examResult": "Результаты экзамена",
+    "contract": "Контракт"
+  },
+  "successModal":{
+    "userAndDirectionName": "<span>{{user}}</span> ваша заявка на успешно отправлена ​​в <span>'{{direction}}'</span>",
+    "backToMainPage":"Главная страница",
+    "backToApplicationPage":"Страница приложения"
+  },
+
+  "button": {
+    "continue": "Продолжать",
+    "back": "Назад"
+  },
+  "logout": "Выйти из аккаунта",
+  "responceError": {
+    "404": "Никакой информации в базе данных не найдено. Пожалуйста, проверьте правильность введенной вами информации и повторите попытку.",
+    "408": "Поскольку центральная база данных «Цифрового правительства» находится на техническом обслуживании, мы просим вас вводить информацию вручную. Приносим свои извинения за доставленные неудобства!",
+    "409": "Вы уже зарегистрированы",
+    "429": "Количество запросов ограничено",
+    "500": "На сервере произошла ошибка. Пожалуйста, повторите попытку позже",
+    "alreadyApplied":"Вы уже подали документы в университет",
+    "serverError":"Ошибка сервера. Повторите попытку позже."
+  },
+  
+  "requirements":{
+    "reqFields":"Обязательное поле",
+    "reqFile":"Выбор файла обязателен",
+    "selectCorrectlyFile":"Выберите правильный тип файла!",
+    "fileSize":"Размер файла слишком велик. Размер файла должен быть меньше 5 МБ!"
+  },
+  "correntEduction":{
+    "title":"Информация о текущем образовании",
+    "country":"Страна, в которой находится учебное заведение",
+    "institutionName":"Название учебного заведения",
+    "educationDirection":"Курс обучения",
+    "currenctCourse":"Ваш текущий курс",
+    "transkript":"Стенограмма"
+  }
+}

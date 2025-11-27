@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #F0F2F5;
+}
+
+.education-radio{
+width: 18px;
+height: 18px;
+}
+.checkboxProfileAccepted{
+  width: 18px;
+  height: 18px;
+  accent-color: #00274C;
+
+}
+

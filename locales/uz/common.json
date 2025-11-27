@@ -1,0 +1,208 @@
+{
+  "changePhoneNumber": "Telefon raqamni o'zgartirish",
+
+  "auth": {
+    "title": "2025-2026-o‘quv yili uchun ariza topshirish",
+    "checkUserSubTitle": "Ro’yhatdan o’tish yoki tizimga kirish uchun telefon raqamingizni kiriting",
+    "phone": "Telefon raqami",
+    "phonePlaceholder": "Telefon raqamingizni kiriting",
+    "changePhoneNumber": "Telefon raqamni o'zgartirish",
+    "changeNumber": "Raqamni o'zgartirish",
+    "verificationCode": "Tasdiqlash kodini",
+    "verificationCodeReq":"Tasdiqlash kodini kiriting",
+    "verificationCodeValidation":"Faqat 6 xonali raqam kiriting",
+    "verificationCodeIncorrect":"Tasdiqlash kodi noto'g'ri. Qayta urinib ko'ring!",
+    "verificationCodeServerError":"Server xatoligi, Qayta yuborish tugmasini bosing va kodni qayta kiriting",
+
+    "verificationPlaceholder": "Tasdiqlash kodini",
+    "userPhoneVerification": "<span>{{number}}</span> raqamingizga kelgan tasdiqlash kodini kiriting",
+    "resendCodeTime": "Kodni qayta yuborish uchun <span>{{time}}</span> soniya kuting",
+    "resendCode": "Kodni qayta yuborish",
+    "createAccountTitle": "Ariza topshirish uchun o'z akkauntingizni yarating",
+    "passportOrBirthPlace": "Pasport yoki ID raqami va Tug’ilgan kuningizni kiriting",
+    "passportOrIdCard": "Passport yoki ID karta raqami",
+    "birthDate": "Tug'ilgan kun",
+    "birthDateReq":"Tu'g'ilgan kuningizni kiriting",
+    "minBirthDate":"Siz 15 yoshdan kichik bo'lsangiz ariza topshira olmaysiz",
+    "birthDatePlaceholder": "kun.oy.yil",
+    "continue": "Davom etish",
+    "next":"Davom ettirish",
+    "toContinue":"Davom etmoq"
+  },
+
+  "prograssBar": {
+    "personalInfo": "Shaxsiy ma'lumotlar",
+    "personalInfoDesc": "Passport ma’lumotlari, manzili, telefon raqamlari",
+    "educationInfo": "Avvalgi ta'lim ma'lumotlari",
+    "educationInfoDesc": "Avvalgi ta’lim va chet tilini bilishi ma’lumotlari",
+    "selectDirection": "Yo'nalishni tanlash",
+    "selectDirectionDesc": "Yo’nalish yoki mutaxassislik va ta’lim shaklini tanlash"
+  },
+
+  "personalInfo": {
+    "title": "Shaxsiy ma'lumotlar",
+    "name": "Ism",
+    "namePlaceholder": "Ismingizni kiriting",
+    "surname": "Familiya",
+    "surnamePlaceholder": "Familiyangizni kiriting",
+    "fatherName": "Otangizni ismi",
+    "fatherNamePlaceholder": "Otangizni ismini kiriting",
+    "passportSeria": "Passport/ID karta seriya va raqami",
+    "passportSeriaPlaceholder": "Passport/ID karta seriya va raqami",
+    "birth_date": "Tug'ilgan kun",
+    "birth_datePlaceholder": "Tug'ilgan kuningizni kiriting",
+    "jshshr": "️JSHSHIR ",
+    "jshshrPlaceholder": "JSHSHIR raqamingizni kiriting",
+    "gender": "Jins",
+    "citizenship": "Fuqarolik",
+    "birth_place": "Tug'ilgan joyi",
+    "phoneReq":"Telefon raqamingizni kiriting",
+    "extraPhoneReq":"Qo'shimcha telefon raqamingizni kiriting",
+    "emailReq":"Emailni kiriting",
+    "validPhoneNumber":"Kiritilgan raqam to'g'ri ekanligini tekshiring!",
+    "serverError":" Serverda nosozlik, iltimos birozdan so'ng qayta urinib ko'ring",
+    "phoneInvalid":"Telefon raqam to'g'ri ekanligini tekshiring!"
+ 
+  },
+  "contactInfo": {
+    "title": "Bog’lanish uchun telefon raqamlar",
+    "phone": "Telefon raqami",
+    "extraPhone": "Qo'shimcha telefon raqami",
+    "email":"Email",
+    "emailPlaceholder":"Email pochtangizni kiriting"
+  },
+  "educationInfo": {
+    "title": "Avvalgi ta’lim ma’lumotlari",
+    "institutionType": "Bitirgan yoki tahsil olayotgan ta'lim dargohi turi",
+    "institutionTypePlaceholder": "Ta'lim dargohi turi",
+    "region": "Ta’lim dargohi joylashgan shahar yoki viloyat",
+    "regionPlaceholder": "Viloyat yoki shaharni tanlang",
+    "district": "Tumanni tanlang",
+    "institutionName": "Ta'lim dargohi nomi",
+    "uploadDiplom": "Diplom, shahodatnoma yoki ma’lumotnoma nusxasi",
+    "requiredTypeUpload": "Hajmi 5 MB dan katta bo'lmagan, .png, .jpg, .jpeg, .pdf fayllarni yuklang",
+    "uploadFile": "Faylni yuklash",
+    "documentNumber":"Diplom yoki shahodatnoma raqami"
+  },
+
+  "uzbmb":{
+    "title": "Imtiyozli imtihonsiz talaba bo'lish uchun UZBMB (DTM) natijasini yuklang!",
+    "fileUpload":"Imtihon natijasi nusxasi"
+  },
+
+  "certifcate": {
+    "title": "Sizda chet tili sertifikati mavjudmi?",
+    "yes": "Ha, mavjud",
+    "no": "Yo'q, mavjud emas",
+    "certifcateUpload": "Sertifikat nusxasi",
+    "requiredTypeUpload": "Hajmi 5 MB dan katta bo'lmagan, .png, .jpg, .jpeg, .pdf fayllarni yuklang",
+    "uploadFile": "Faylni yuklash",
+    "certificationType":"Sertifikat turi"
+  },
+
+  "selectDirection": {
+    "selectDirection": "Yo'nalishni tanlash",
+    "degree": "Daraja",
+    "selectDegree": "Darajani tanlang",
+    "directionOrSpeciality": "Yo'nalish yoki mutaxassislik",
+    "selectDirectionOrSpeciality": "Yo'nalish yoki mutaxassislikni tanlang",
+    "eduType": "Ta'lim shakli",
+    "selectEduType": "Ta'lim shaklini tanlang",
+    "workExperience": "Ish tajribasi",
+    "workExperienceExtra": "<span>{{value}}</span> saytidan olingan ish tajribasi haqidagi ma’lumotnomani yuklang",
+    "eduLang": "Ta'lim tili",
+    "selectEduLang": "Ta'lim tilini tanlang",
+    "tuitionFeeForYear": "1 yillik o'qish to'lovi",
+    "agreeRequariment": "Arizadagi barcha ma’lumotlarni o‘z qo‘lim bilan to‘ldirdim, ma’lumotlarim to‘g‘riligiga kafolat beraman. Agar men o‘zim haqimda noto‘g‘ri yoki yolg‘on ma’lumotlar kiritgan bo‘lsam, oliygoh qabul bo‘limi mening arizamni rad etishga haqli ekanligini bilaman.",
+    "sendApplication": "Arizani yuborish",
+    "back": "Orqaga"
+  },
+
+  "applicationStatus": {
+    "applicationStatus": "Ariza holati",
+    "submissionDate": "Ariza yuborilgan sana",
+    "reviewApplication": "Arizangiz mutaxassislar tomonidan ko‘rib chiqilmoqda",
+    "myApplication": "Mening arizam",
+    "degree": "Daraja",
+    "direction": "Yo'nalish yoki mutaxassislik",
+    "educationType": "Ta'lim shakli",
+    "educationLang": "Ta'lim tili",
+    "workExperience": "Ish tajribasi",
+    "applicationEdit": "Arizani tahrirlash",
+    "cancalApplication": "Arizani bekor qilish",
+    "onlineExam": "Onlayn imtihon topshirish"
+  },
+
+  "allStatus": {
+    "pending": "Kutilmoqda",
+    "accepted": "Tasdiqlangan",
+    "called-exam": "Imtihonga chaqirilgan",
+    "edit-reject": "Tahrirlash uchun qaytarilgan",
+    "rejected": "Ariza rad etildi",
+    "marked": "Imtihon natijasi",
+    "came-exam": "Imtihonga chaqirilgan",
+    "recom-student": "Talabalikka tavsiya etildi",
+    "pendingText": "Arizangiz mutaxassislar tomonidan ko‘rib chiqilmoqda"
+  },
+  "examResult": {
+    "examSubjects": "Imtihon fanlari",
+    "examSubjectName": "Imtihon fan nomi",
+    "everySubject": "Har bir fan uchun",
+    "correctAnswer": "To'g'ri javoblar soni",
+    "overallScoreBySubject": "Jami ball",
+    "examResult": "Imtihon natijasi",
+    "contactSoon": "Tez orada universitet hodimlari siz bilan aloqaga chiqadi.",
+    "callCenter": "Aloqa markazi:",
+    "examDate": "Imtihon sanasi:"
+  },
+
+  "layoutRoute": {
+    "personalInfo": "Shaxsiy ma'lumotlar",
+    "personalInfoDesc": "Passport ma’lumotlari, manzili, telefon raqamlari",
+    "educationInfo": "Avvalgi ta'lim ma'lumotlari",
+    "educationInfoDesc": "Avvalgi ta’lim va chet tilini bilishi ma’lumotlari",
+    "selectDirection": "Yo'nalishni tanlash",
+    "selectDirectionDesc": "Yo’nalish yoki mutaxassislik va ta’lim shaklini tanlash",
+    "applications": "Arizalar",
+    "examResult": "Imtihon natijasi",
+    "contract": "Shartnoma"
+  },
+  "successModal":{
+    "userAndDirectionName": "<span>{{user}}</span> arizangiz <span>'{{direction}}'</span> yo'nalishiga muvaffaqiyatli topshirilidi",
+    "backToMainPage":"Asosiy sahifaga qaytish",
+    "backToApplicationPage":"Arizalar bo'limiga o'tish"
+  },
+
+  "button": {
+    "continue": "Davom etish",
+    "back": "Orqaga"
+  },
+  "logout": "Tizimdan chiqish",
+
+  "responceError": {
+    "404": "Ma'lumotlar bazasida ma'lumotlar topilmadi. Kiritilgan maʼlumotlar toʻgʻriligini tekshiring va qaytadan urinib koʻring",
+    "408": "Raqamli hukumat markaziy ma'lumotlar bazasida texnik ishlar olib borilyotganligi sababli ma'lumotlaringizni qo’lda kiritishingizni so’rab qolamiz. Noqulaylik uchun uzur so’raymiz!",
+    "409": "Siz allaqachon ro'yhatdan o'tgansiz",
+    "429": "So'rovlar soni cheklangan",
+    "500": "Serverda xatolik yuz berdi. Iltimos, keyinroq urinib ko'ring",
+    "alreadyApplied":"Siz allaqchon universitetga ariza topshirgansiz",
+    "serverError":"Serverda nosozlik, iltimos birozdan so'ng qayta urinib ko'ring"
+  },
+
+  "requirements":{
+    "reqFields":"Majburiy maydon",
+    "reqFile":"Faylni tanlash majburiy",
+    "selectCorrectlyFile":"To'g'ri fayl turini tanlang!",
+    "fileSize":"Fayl hajmi juda katta. Fayl hajmi 5MBdan kichik bo'lishi kerak!"
+  },
+
+  "correntEduction":{
+    "title":"Hozirgi ta’lim darhogi ma’lumotlar",
+    "country":"Ta’lim dargohi joylashgan davlat",
+    "institutionName":"Ta'lim dargohi nomi",
+    "educationDirection":"Ta’lim yo’nalishi",
+    "currenctCourse":"Ayni vaqtdagi kursingiz",
+    "transkript":"Transkript"
+  }
+
+}

@@ -1,0 +1,212 @@
+{
+    "changePhoneNumber": "Update phone number",
+  
+    "auth": {
+      "title": "Apply for admission 2025-2026",
+      "checkUserSubTitle": "Enter your phone number for registration or authorization",
+      "phone": "Phone number",
+      "phonePlaceholder": "Enter phone number",
+      "changePhoneNumber": "Change number",
+      "changeNumber": "Change number",
+      "verificationCode": "Verification code",
+      "verificationPlaceholder": "Enter verification code",
+      "verificationCodeReq":"Enter confirmation code",
+      "verificationCodeValidation":"Enter a 6-digit number only",
+      "verificationCodeIncorrect":"The verification code is invalid. Try again!",
+      "verificationCodeServerError":"Server error, click resend button and re-enter the code",
+
+      "userPhoneVerification": "Enter the confirmation code received on your number <span>{{number}}</span>.",
+      "resendCodeTime": "Please wait <span>{{time}}</span> seconds to resend the code.",
+      "resendCode": "Resend code",
+      "createAccountTitle": "Create an account to apply",
+      "passportOrBirthPlace": "Enter your passport or ID card number and date of birth.",
+      "passportOrIdCard": "Passport or ID card number",
+      "birthDate": "Birthday",
+      "birthDateReq":"Enter your birthday",
+      "minBirthDate":"You cannot apply if you are under 15 years old",
+      "birthDatePlaceholder": "day.month.year",
+      "continue": "Continue",
+      "next":"Next",
+      "toContinue":"Continue"
+
+
+     
+    },
+  
+    "prograssBar": {
+      "personalInfo": "Personal information",
+      "personalInfoDesc": "Passport details, address, phones",
+      "educationInfo": "Previous education information",
+      "educationInfoDesc": "Information about previous education and knowledge of foreign languages",
+      "selectDirection": "Select a direction",
+      "selectDirectionDesc": "Choice of direction or specialty and form of training"
+    },
+  
+    "personalInfo": {
+      "title": "Personal information",
+      "name": "Name",
+      "namePlaceholder": "Enter your name",
+      "surname": "Surname",
+      "surnamePlaceholder": "Enter your surname",
+      "fatherName": "Father name",
+      "fatherNamePlaceholder": "Enter your father",
+      "passportSeria": "Passport series and number",
+      "passportSeriaPlaceholder": "Series and passport number",
+      "birth_date": "Date of birth",
+      "birth_datePlaceholder": "Enter your date of birth",
+      "jshshr": "PIN",
+      "jshshrPlaceholder": "Enter your PIN number",
+      "gender": "Gender",
+      "citizenship": "Citizenship",
+      "birth_place": "Place of birth",
+      "phoneReq":"Enter your phone number",
+      "extraPhoneReq":"Enter your additional phone number",
+      "validPhoneNumber":"Make sure that the entered number is correct",
+      "emailReq":"Email is required",
+      "serverError":"Server error, please try again later",
+      "phoneInvalid":"Phone must be a valid phone number"
+
+    },
+    "contactInfo": {
+      "title": "Contact phones",
+      "phone": "Phone",
+      "extraPhone": "Additional phone",
+      "email":"Email",
+      "emailPlaceholder":"Enter your email address"
+    },
+    "educationInfo": {
+      "title": "Previous education information",
+      "institutionType": "Type of educational institution",
+      "institutionTypePlaceholder": "Select the type of education",
+      "region": "Region",
+      "regionPlaceholder": "Select a region",
+      "district": "District",
+      "institutionName": "Name of educational institution",
+      "uploadDiplom": "Upload diploma",
+      "requiredTypeUpload": "Upload files no larger than 5 MB, .png, .jpg, .jpeg, .pdf",
+      "uploadFile": "Upload file",
+      "documentNumber":"Diploma or certificate number"
+
+    },
+    "uzbmb":{
+      "title": "Download the UZBMB (DTM) result to become a student without a privileged exam!",
+      "fileUpload":"A copy of the exam result"
+    },
+  
+    "certifcate": {
+      "title": "Do you have a foreign language certificate?",
+      "yes": "Yes, I do",
+      "no": "No",
+      "certifcateUpload": "Upload certificate",
+      "requiredTypeUpload": "Upload files no larger than 5 MB, .png, .jpg, .jpeg, .pdf",
+      "uploadFile": "Upload file",
+      "certificationType":"Certificate type"
+  
+    },
+  
+    "selectDirection": {
+      "selectDirection": "Select direction",
+      "degree": "Degree",
+      "selectDegree": "Select degree",
+      "directionOrSpeciality": "Direction or speciality",
+      "selectDirectionOrSpeciality": "Select direction or specialty",
+      "eduType": "Form of education",
+      "selectEduType": "Select form of education",
+      "workExperience": "Work experience",
+      "workExperienceExtra": "Download a reference of work experience on the website <span>{{value}}</span>",
+      "eduLang": "Language of education",
+      "selectEduLang": "Select language of education",
+      "tuitionFeeForYear": "Tuition fee for year",
+      "agreeRequariment": "I filled in all the information in the application myself, I guarantee that my data is correct. I understand that the admissions committee reserves the right to reject my application if I have provided false or misleading information about myself.",
+      "sendApplication": "Send application",
+      "back": "Back"
+    },
+
+        "applicationStatus": {
+          "applicationStatus": "Application Status",
+          "submissionDate": "Submission Date",
+          "reviewApplication": "Review Application",
+          "myApplication": "My Application",
+          "degree": "Degree",
+          "direction": "Direction",
+          "educationType": "Form of Education",
+          "educationLang": "Language of education",
+          "workExperience": "Work Experience",
+          "applicationEdit": "Edit Application",
+          "cancalApplication": "Cancel Application",
+          "onlineExam": "Online Exam Submission"
+        },
+      
+        "allStatus": {
+          "pending": "Pending",
+          "accepted": "Confirmed",
+          "called-exam": "Invited for Exam",
+          "edit-reject": "Rejected for Editing",
+          "rejected": "Rejected",
+          "marked": "Exam Result",
+          "came-exam": "Invited for Exam",
+          "recom-student": "Recommended for Students",
+          "pendingText": "Your application is being reviewed by experts"
+        },
+        "examResult": {
+          "examSubjects": "Exam Subjects",
+          "examSubjectName": "Exam Subject Name",
+          "everySubject": "For Each Subject",
+          "correctAnswer": "Number of Correct Answers",
+          "overallScoreBySubject": "Overall Score",
+          "examResult": "Exam Results",
+          "contactSoon": "University staff will contact you shortly.",
+          "callCenter": "Contact Center:",
+          "examDate": "Exam Date:"
+        },
+      
+        "layoutRoute": {
+          "personalInfo": "Personal Information",
+          "personalInfoDesc": "Passport Data, Address, Phones",
+          "educationInfo": "Previous education information",
+          "educationInfoDesc": "Information about Previous Education",
+          "selectDirection": "Select Direction",
+          "selectDirectionDesc": "Choice of Direction and Form of Training",
+          "applications": "My Applications",
+          "examResult": "Exam Results",
+          "contract": "Contract"
+        },
+        "successModal":{
+          "userAndDirectionName": "<span>{{user}}</span> your application has been successfully submitted to <span>'{{direction}}'</span>",
+          "backToMainPage":"Main page",
+          "backToApplicationPage":"Application page"
+       
+        },
+      
+        "button": {
+          "continue": "Continue",
+          "back": "Back"
+        },
+        "logout": "Log Out",
+        "responceError": {
+          "404": "No information found in the database. Please check the accuracy of the information entered and try again.",
+          "408": "As the 'Digital Government' central database is undergoing maintenance, we ask you to enter the information manually. We apologize for the inconvenience!",
+          "409": "You are already registered",
+          "429": "The number of requests is limited",
+          "500": "An error occurred on the server. Please try again later",
+          "alreadyApplied":"You have already applied",
+          "serverError":"Server error, please try again later"
+        },
+        "requirements":{
+          "reqFields":"Required field",
+          "reqFile":"Uplod file is requaried",
+          "selectCorrectlyFile":"Choose the right file type!",
+          "fileSize":"The file size is too large. The file size must be less than 5 MB!"
+        },
+
+        "correntEduction":{
+          "title":"Information about current education",
+          "country":"Country in which the educational institution is located",
+          "institutionName":"the name of the institution",
+          "educationDirection":"Course of Study",
+          "currenctCourse":"Your current course",
+          "transkript":"Transcript"
+        }
+      
+  }
+  

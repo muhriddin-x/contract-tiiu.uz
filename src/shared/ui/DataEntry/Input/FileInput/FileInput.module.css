@@ -1,0 +1,7 @@
+.FileInput::file-selector-button {
+  display: none;
+}
+
+.FileInput::-webkit-file-upload-button {
+  display: none;
+}

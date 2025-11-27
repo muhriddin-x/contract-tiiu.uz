@@ -1,0 +1,25 @@
+.Content {
+  @apply rounded-lg text-sm leading-4 flex items-center gap-3 border border-border-color py-2 md:py-3 px-4;
+}
+
+.ContentCircle {
+  @apply relative block;
+}
+
+.Content .ContentCircle::before {
+  @apply rounded-full border-border-color border w-[24px] h-[24px] block;
+  content: "";
+}
+
+.Radio:checked + .Content {
+  @apply border-primary text-primary;
+}
+
+.Radio:checked + .Content .ContentCircle::before {
+  @apply border-primary;
+}
+
+.Radio:checked + .Content .ContentCircle::after {
+  @apply rounded-full absolute top-1/2 left-0 -translate-y-1/2 translate-x-1/2 bg-primary block w-[12px] h-[12px];
+  content: "";
+}

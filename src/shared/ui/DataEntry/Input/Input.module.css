@@ -1,0 +1,22 @@
+.Input {
+  background-color: #fff;
+  height: 45px;
+}
+
+.Input::-webkit-date-and-time-value {
+  text-align: left;
+}
+
+.Input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+.Input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.Input[type="date"]::-webkit-datetime-edit {
+  line-height: 1;
+  padding: 0;
+  margin-bottom: -2px;
+}

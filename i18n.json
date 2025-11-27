@@ -1,0 +1,9 @@
+{
+  "locales": ["ru", "uz", "en"],
+  "defaultLocale": "uz",
+  "localeDetection": false,
+  "pages": {
+    "*": ["common"],
+    "rgx:^/my-profile": ["common"]
+  }
+}
