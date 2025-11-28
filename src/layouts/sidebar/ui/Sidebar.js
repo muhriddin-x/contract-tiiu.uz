@@ -16,22 +16,12 @@ export const Sidebar = ({ page }) => {
     else return false;
   };
 
-  if (userData?.havePreviousEducation == true) {
-    SiderMenuData[1].path = "/profile/transfer";
-  }
-
-  const SidebarMenuData = SiderMenuData.filter((item, index) => {
-    if (localStorage.getItem("didTakeTheTest") === "false") {
-      return index !== 3;
-    }
-    return true;
-  });
   const handleClose = () => setOpenModal(false);
 
   return (
     <div className="w-full h-[80vh] bg-white rounded-[10px] py-5 px-2 flex flex-col justify-between">
       <ul className="mt-0">
-        {SidebarMenuData.map((item) => {
+        {SiderMenuData.map((item) => {
           return (
             <li
               key={item.id}

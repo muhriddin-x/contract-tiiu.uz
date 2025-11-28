@@ -1,10 +1,6 @@
-import { SelectDirection } from "@/components/Profile/Form/SelectDirection";
+// import { SelectDirection } from "@/components/Profile/Form/SelectDirection";
 
 function SelectDirections() {
-  return (
-    <div>
-      <SelectDirection />
-    </div>
-  );
+  return <div>{/* <SelectDirection /> */}</div>;
 }
 export default SelectDirections;

@@ -38,6 +38,7 @@ module.exports = {
         "emerald-green": "#27AE60",
         nephritis: "#27AE60",
         "mix-blue": "#CFD9FE",
+        "main-blue": "#0F60FF",
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],

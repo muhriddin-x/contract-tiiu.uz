@@ -5,8 +5,9 @@ export const { useGetMyDataQuery, useLazyGetMyDataQuery } =
     endpoints: (builder) => ({
       getMyData: builder.query({
         forceRefetch: () => false,
-        query: () => ({
-          url: "/v1/application-forms/me",
+        query: ({ type, admission_year }) => ({
+          url: `/v1/students/me/${type}?admission_year=${admission_year}`,
+          // url: "/v1/application-forms/me",
         }),
         providesTags: ["User"],
         transformResponse(data) {

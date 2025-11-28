@@ -159,8 +159,8 @@
   "layoutRoute": {
     "personalInfo": "Shaxsiy ma'lumotlar",
     "personalInfoDesc": "Passport ma’lumotlari, manzili, telefon raqamlari",
-    "educationInfo": "Avvalgi ta'lim ma'lumotlari",
-    "educationInfoDesc": "Avvalgi ta’lim va chet tilini bilishi ma’lumotlari",
+    "educationInfo": "Ta'lim ma'lumotlari",
+    "educationInfoDesc": "Ta’lim va chet tilini bilishi ma’lumotlari",
     "selectDirection": "Yo'nalishni tanlash",
     "selectDirectionDesc": "Yo’nalish yoki mutaxassislik va ta’lim shaklini tanlash",
     "applications": "Arizalar",

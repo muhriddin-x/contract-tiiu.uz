@@ -6,8 +6,6 @@ import { useState } from "react";
 
 export const MobileSidebar = ({ toggle, handleToggle, page, userData }) => {
   let { t } = useTranslation("common");
-  const { src } = userData;
-  const isManually = src === "manually";
 
   const [openModal, setOpenModal] = useState(false);
   const SidebarMenuData = SiderMenuData.filter((item, index) => {
@@ -20,6 +18,13 @@ export const MobileSidebar = ({ toggle, handleToggle, page, userData }) => {
   const handleOpen = () => {
     setOpenModal(true);
     handleToggle();
+  };
+  const getShortName = (fullName) => {
+    if (!fullName) return "";
+    const parts = fullName.trim().split(" ");
+    const firstNameInitial = parts[0] ? parts[0][0] : "";
+    const lastName = parts[1] || ""; // familiya
+    return `${lastName} ${firstNameInitial}.`;
   };
   return (
     <div className="">
@@ -70,7 +75,7 @@ export const MobileSidebar = ({ toggle, handleToggle, page, userData }) => {
             </div>
             <div className="flex ">
               <p className="text-white mt-2">
-                {userData?.last_name} {userData?.first_name?.charAt(0)}.
+                {getShortName(userData?.full_name)}
               </p>
             </div>
 

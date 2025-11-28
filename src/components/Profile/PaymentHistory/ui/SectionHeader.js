@@ -1,17 +1,28 @@
-import { formatDate } from "@/shared/lib/formatDate";
 import { Select } from "@/shared/ui/DataEntry/Select";
-import { styles } from "@/shared/ui/DataEntry/Select/Select.styles";
 import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
-import ReactSelect from "react-select";
+import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/router";
 
-export const SectionHeader = ({ myApplication }) => {
+export const SectionHeader = ({ admissionYears }) => {
   let { t } = useTranslation("common");
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const admission_years = admissionYears?.map((year) => ({
+    value: year.admission_year,
+    label: year.name,
+  }));
 
-  const admission_years = [
-    { value: "2024-2025", label: "2024-2025 O'quv yili" },
-    { value: "2023-2024", label: "2023-2024 O'quv yili" },
-  ];
+  // const admission_years = [
+  //   { value: "2025", label: "2024-2025" },
+  //   { value: "2024", label: "2023-2024" },
+  // ];
+
+  const handleYearChange = (selected) => {
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("admission_year", selected.value);
+    router.replace(`?${params.toString()}`);
+  };
 
   return (
     <div className="sm:py-5 sm:px-5 py-2 px-3 rounded-lg flex justify-between items-center bg-white">
@@ -30,21 +41,14 @@ export const SectionHeader = ({ myApplication }) => {
           </strong>
         </div>
       </div>
+
       <div>
         <Select
           style={{ width: "200px !important" }}
-          className="!border-none !outline-none !bg-red"
           defaultValue={admission_years[0]}
           options={admission_years}
-          creatable
+          onChange={handleYearChange}
         />
-
-        {/* <ReactSelect
-          isSearchable={false}
-          options={admission_years}
-          styles={styles}
-         
-        /> */}
       </div>
     </div>
   );

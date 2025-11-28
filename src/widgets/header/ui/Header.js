@@ -1,3 +1,5 @@
+"use client";
+
 import { useGetMyDataQuery } from "@/entities/user";
 import { MobileSidebar } from "@/layouts/sidebar/ui/MobileSidebar";
 import { Container } from "@/shared/ui/Container";
@@ -9,12 +11,14 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { userData } from "../../../../store/counterSlice";
+import { useMyData } from "@/entities/user/api/useMyData";
+import { StudentMeType } from "@/entities/user/model/MyDataTypes";
 
 export const Header = () => {
   const router = useRouter();
   const [toggle, setToggle] = useState(false);
   const dispatch = useDispatch();
-  const { data } = useGetMyDataQuery();
+  const { data } = useMyData(StudentMeType.PERSONAL);
   useEffect(() => {
     dispatch(userData(data));
     localStorage.setItem(
@@ -22,9 +26,6 @@ export const Header = () => {
       JSON.stringify(data?.didTakeTheTest)
     );
   }, [router]);
-
-  const applicationFormComplated =
-    data?.user_education?.src || data?.pinfl_user_education?.src;
 
   function handleToggle() {
     setToggle(!toggle);
@@ -36,7 +37,7 @@ export const Header = () => {
         <div className="flex justify-between items-center">
           <div className="sm:hidden flex items-center gap-3">
             <div>
-              {applicationFormComplated && (
+              {data && (
                 <MobileSidebar
                   userData={data}
                   handleToggle={handleToggle}
@@ -67,7 +68,7 @@ export const Header = () => {
           </Link>
 
           <div className="flex items-center sm:gap-3 gap-0">
-            <SwitchLanguage />
+            {/* <SwitchLanguage /> */}
             {data?.first_name && <Logout userData={data} />}
           </div>
         </div>

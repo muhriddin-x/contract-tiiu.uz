@@ -60,88 +60,23 @@ export const FormData = () => {
     setLoading(true);
     values.phone = unformatPhone(values.phone);
     values.code = +values.code;
-    usePost("/v1/auth/verify", {
+    usePost("/v1/auth/student/verify", {
       phone: values.phone,
       code: values.code,
     })
       .then((res) => {
-        // console.log(res);
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("refreshToken", res.data.refreshToken);
         localStorage.setItem("user", JSON.stringify(res?.data));
-        if (
-          res?.data?.havePreviousEducation == false &&
-          res?.data?.haveApplicationForm == true
-        ) {
-          localStorage.removeItem("purposeOfApplication");
-        }
-
-        if (
-          res?.data?.haveApplicationForm == true &&
-          res?.data?.haveEducation == true &&
-          res?.data?.haveApplied == false
-        ) {
-          router.push("/profile/select-direction");
-        } else if (
-          res?.data?.haveApplicationForm == true &&
-          res?.data?.haveApplied == true
-        ) {
-          router.push("/profile/application-status");
-        } else if (
-          res?.data?.haveApplicationForm == true &&
-          res?.data?.haveEducation == false
-        ) {
-          router.push("/profile/personal-information");
-        } else {
-          router.push("/auth/create-account");
-        }
-
-        // old code
-
-        // if (
-        //   res?.data?.haveApplicationForm == true &&
-        //   res?.data?.haveEducation == true &&
-        //   res?.data?.haveApplied == false
-        // ) {
-        //   router.push("/profile/select-direction");
-        // } else if (
-        //   res?.data?.haveApplicationForm == true &&
-        //   res?.data?.haveEducation == true &&
-        //   res?.data?.haveApplied == true
-        // ) {
-        //   router.push("/profile/application-status");
-        // } else if (
-        //   res?.data?.haveApplicationForm == true &&
-        //   res?.data?.haveEducation == false &&
-        //   purposeOfApplication == "abituryent"
-        // ) {
-        //   router.push("/profile/educational-information");
-        // } else if (
-        //   res?.data?.haveApplicationForm == true &&
-        //   res?.data?.haveEducation == false &&
-        //   purposeOfApplication == "transfer"
-        // ) {
-        //   router.push("/profile/transfer");
-        // }
-
-        // // else
-        // else {
-        //   router.push("/auth/create-account");
-        // }
-
-        // router.push("/profile/personal-information");
+        router.push("/profile/personal-information");
       })
       .catch((err) => {
-        // console.log(err);
-        // if error status code is 410 then show invalid code error
-        if (err.response?.data?.statusCode === 410) {
-          // inValidCodeError();
-          setInvalidCode(true);
-        } else {
-          // serverError();
-          setIsServerError(true);
-        }
-        setLoading(false);
+        setInvalidCode(true);
+        // if (err.response?.data?.statusCode === 410) {
+        //   setInvalidCode(true);
+        // } else {
+        //   setIsServerError(true);
+        // }
       })
       .finally(() => {
         setLoading(false);
