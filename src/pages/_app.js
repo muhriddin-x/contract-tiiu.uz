@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }) {
       <Head>
         <title>TIIU Admission</title>
         {/* <!-- Meta Pixel Code --> */}
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `!function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -31,7 +31,7 @@ fbq('track', 'PageView');`,
             style={{ display: "none" }}
             src="https://www.facebook.com/tr?id=707326858329597&ev=PageView&noscript=1"
           />
-        </noscript>
+        </noscript> */}
         {/* <!-- End Meta Pixel Code --> */}
 
         {/* <!-- Meta Pixel Code --> */}
